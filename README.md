@@ -1,8 +1,8 @@
-# [Name of the Project] : [Team Number]
+# Boba Shoppe App : Team Two
 # Members
 Project Manager: [Name] ([GitHub Name])\
 Communications Lead: [Name] ([GitHub Name])\
-Git Master: [Name] ([GitHub Name])\
+Git Master: Melanie J. Steiner (an-npc)\
 Design Lead: [Name] ([GitHub Name])\
 Quality Assurance Tester: [Name] ([GitHub Name])
 
