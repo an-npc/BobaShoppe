@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, View, Text } from 'react-native';
+import { Button, XGroup, XStack, YStack } from 'tamagui';
+
+import Ionicons from '@expo/vector-icons/Ionicons';
+
+import { TamaguiProvider } from '@tamagui/core';
+
+import config from '../../tamagui.config';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -6,6 +13,19 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
+  return (
+    <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
+      <TamaguiProvider config={config}>
+        <Button color={"$blue10Light"} variant="outlined">
+          <Ionicons name="add-circle" size={32} color='green' />
+          <Button.Text>hi</Button.Text>
+        </Button>
+      </TamaguiProvider>
+    </View>
+  );
+}
+
+export function HomeScreen2() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -16,7 +36,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Welcome!!!!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -53,6 +73,8 @@ export default function HomeScreen() {
     </ParallaxScrollView>
   );
 }
+
+
 
 const styles = StyleSheet.create({
   titleContainer: {
